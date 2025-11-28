@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Application</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function updatePay() {
+            let exp = Number(document.getElementById("exp").value);
+            let payField = document.getElementById("pay");
+
+            if (exp >= 2) {
+                payField.value = "28% / 65 CPM";
+            } else {
+                payField.value = "26% / 60 CPM";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Company Driver Application</h2>
+
+        <form action="https://formsubmit.co/shaxriyor.z@icloud.com" method="POST">
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="New Driver Application">
+            <input type="hidden" name="_next" value="success.html">
+
+            <label>Full Name</label>
+            <input type="text" name="Full Name" required>
+
+            <label>Phone Number</label>
+            <input type="text" name="Phone" required>
+
+            <label>Email</label>
+            <input type="email" name="Email" required>
+
+            <label>Website / Link (optional)</label>
+            <input type="text" name="Website">
+
+            <label>Experience (Years OTR)</label>
+            <input type="number" id="exp" name="Experience" min="1" required oninput="updatePay()">
+
+            <label>Weekly Miles</label>
+            <input type="number" name="Weekly Miles" value="4000" min="4000" max="5000" required>
+
+            <label>ELD</label>
+            <input type="text" value="Agreed" name="ELD" readonly>
+
+            <label>Home Time</label>
+            <input type="text" name="Home Time" value="4 weeks on | 3-4 days off" readonly>
+
+            <label>Pay</label>
+            <input type="text" id="pay" name="Pay" value="26% / 60 CPM" readonly>
+
+            <label>Payment Type</label>
+            <input type="text" name="Payment Type" value="1099 Only" readonly>
+
+            <label>Escrow</label>
+            <input type="text" name="Escrow" value="$2,500 ($250/week)" readonly>
+
+            <label>Trailer Type</label>
+            <select name="Trailer Type" required>
+                <option value="Dry Van">Dry Van</option>
+                <option value="Reefer">Reefer</option>
+                <option value="Hazmat">Hazmat</option>
+                <option value="Tanker">Tanker</option>
+                <option value="Flatbed">Flatbed</option>
+            </select>
+
+            <label>Amazon Type</label>
+            <select name="Amazon">
+                <option value="Relay">Relay</option>
+                <option value="On Account">On Account</option>
+            </select>
+
+            <label>Last Company</label>
+            <input type="text" name="Last Company" required>
+
+            <label>Location</label>
+            <input type="text" name="Location" required>
+
+            <label>ZIP Code</label>
+            <input type="text" name="Zip Code" required>
+
+            <label>Violations (Optional)</label>
+            <input type="text" name="Violations">
+
+            <label>Ready Date</label>
+            <input type="date" name="Ready Date" required>
+
+            <label>Referred By</label>
+            <input type="text" name="Referred By" value="Shane" readonly>
+
+            <button type="submit" class="btn-submit">Submit Application</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

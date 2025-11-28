@@ -1,0 +1,25 @@
+:root{--red:#c00000;--dark:#111}
+*{box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f4f4f5;color:#111}
+.site-header{display:flex;align-items:center;gap:18px;padding:18px;background:var(--dark);color:#fff}
+.site-header.small{padding:12px}
+.logo{height:60px}
+.brand-title{font-weight:800;font-size:18px}
+.hero{height:420px;background-size:cover;background-position:center;display:flex;align-items:center;color:#fff}
+.hero-inner{background:rgba(0,0,0,0.45);padding:30px;border-radius:8px;margin-left:40px}
+.hero-inner h1{font-size:48px;margin:0}
+.lead{opacity:0.95;margin-top:10px}
+.hero-cta{margin-top:16px}
+.btn-apply{display:inline-block;padding:12px 18px;background:#1075e8;color:#fff;border-radius:8px;text-decoration:none;font-weight:700}
+.btn-telegram{display:inline-block;margin-left:12px;padding:10px 14px;background:#05a357;color:#fff;border-radius:8px;text-decoration:none;font-weight:700}
+.container{max-width:1100px;margin:22px auto;padding:0 18px}
+.card{background:#fff;padding:20px;border-radius:10px;margin-bottom:18px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.gallery{display:flex;flex-wrap:wrap;gap:12px}
+.gallery img{width:260px;height:160px;object-fit:cover;border-radius:8px;background:#eee}
+.site-footer{background:var(--dark);color:#fff;padding:18px;text-align:center;margin-top:18px}
+label{display:block;font-weight:600;margin-bottom:6px}
+input[type=text],input[type=email],input[type=tel],input[type=number],select{width:100%;padding:8px;border:1px solid #ddd;border-radius:6px}
+input[type=file]{border:1px dashed #ccc;padding:10px;border-radius:6px;background:#fafafa}
+.btn-apply{cursor:pointer;border:none}
+.note{font-size:13px;color:#666;margin-top:12px}
+@media(max-width:720px){.hero-inner{margin-left:16px;padding:16px}.hero-inner h1{font-size:32px}.gallery img{width:48%;height:120px}}
